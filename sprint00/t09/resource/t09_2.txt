@@ -1,0 +1,9 @@
+<string>YES</string>
+<string>NO</string>
+<string>59</string>
+<string>69</string>
+<string>44</string>
+<string>46</string>
+<string>49</string>
+<string>HELLO</string>
+<string>STOP</string>

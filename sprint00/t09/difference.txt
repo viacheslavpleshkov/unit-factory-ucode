@@ -1,0 +1,6 @@
+7c7,9
+< <string>33</string>
+---
+> <string>49</string>
+> <string>HELLO</string>
+> <string>STOP</string>
