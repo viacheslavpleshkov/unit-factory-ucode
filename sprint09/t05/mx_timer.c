@@ -1,4 +1,5 @@
 #include <time.h>
+
 double mx_timer(void (*f)()) {
     double start = clock();
     f();
