@@ -3,3 +3,5 @@
 *.o
 *.out
 *.a
+.vscode
+.ide
