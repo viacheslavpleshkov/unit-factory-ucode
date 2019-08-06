@@ -1,10 +1,9 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef COPYFILE_H
+#define COPYFILE_H
 
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 #include <errno.h>
 

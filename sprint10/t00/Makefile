@@ -3,8 +3,8 @@ NAME = read_file
 SRCS = src/mx_strlen.c src/mx_printerr.c src/main.c
 SRCSOB = mx_strlen.c mx_printerr.c main.c 
 
-INC = inc/header.h
-INCOB = header.h
+INC = inc/readfile.h
+INCOB = readfile.h
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 

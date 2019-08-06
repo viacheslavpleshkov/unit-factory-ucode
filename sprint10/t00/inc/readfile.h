@@ -1,5 +1,5 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef READFILE_H
+#define READFILE_H
 
 #include <fcntl.h>
 #include <unistd.h>

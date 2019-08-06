@@ -1,4 +1,4 @@
-#include "header.h"
+#include "readfile.h"
 
 int main(int argc, char *argv[]) {
 	char buff;

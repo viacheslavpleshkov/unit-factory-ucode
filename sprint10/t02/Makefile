@@ -1,10 +1,10 @@
-NAME = mx_cp
+NAME = mx_cat
 
 SRCS = src/mx_strlen.c src/mx_printerr.c src/main.c
 SRCSOB = mx_strlen.c mx_printerr.c main.c 
 
-INC = inc/copyfile.h
-INCOB = copyfile.h
+INC = inc/cat.h
+INCOB = cat.h
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
