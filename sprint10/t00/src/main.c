@@ -1,24 +1,20 @@
 #include "header.h"
 
 int main(int argc, char *argv[]) {
-	char buff[] = "\0";
-	int popen = 0;
-	int pread = 0;
+	char buff;
+	int file = 0;
     if (argc != 2) {
-        mx_printerr("usage: ./read_file [file_path]");		
+        mx_printerr("usage: ./read_file [file_path]\n");		
         return 0;
-    } else if ((popen = open(argv[1], O_RDONLY)) == -1) {
-        mx_printerr("error");
+    } else if ((file = open(argv[1], O_RDONLY)) == -1) {
+        mx_printerr("error\n");
         return 0;
     } else {
-    	int popen = open(argv[1], O_RDONLY);
-    	int pread = read(popen, buff, 1);
-    	while(pread > 0) {
+    	int file = open(argv[1], O_RDONLY);
+    	while(read(file, &buff, 1)) {
     		write(1, &buff, 1);
-    		pread = read(popen, buff, 1);
     	}
         return 0;
     }
-   close(popen);
-   close(pread);
+   close(file);
 }
