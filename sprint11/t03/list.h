@@ -2,6 +2,7 @@
 #define LIST_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef struct s_list {
     void *data;
@@ -10,6 +11,5 @@ typedef struct s_list {
 
 
 t_list *mx_create_node(void *data);
-void mx_push_front(t_list **list, void *data);
-
+void mx_pop_back(t_list **list);
 #endif
