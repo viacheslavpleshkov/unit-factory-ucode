@@ -1,6 +1,6 @@
 #include "list.h"
 
-void mx_push_back(t_list **list, void *data){
+void mx_push_back(t_list **list, void *data) {
 	//new
 	t_list *back_list  = mx_create_node(data);
 

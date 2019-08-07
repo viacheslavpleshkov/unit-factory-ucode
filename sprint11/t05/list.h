@@ -9,5 +9,5 @@ typedef struct s_list {
 } t_list;
 
 
-void mx_pop_back(t_list **list);
+int mx_list_size(t_list *list);
 #endif
