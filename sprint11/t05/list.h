@@ -10,4 +10,5 @@ typedef struct s_list {
 
 
 int mx_list_size(t_list *list);
+
 #endif

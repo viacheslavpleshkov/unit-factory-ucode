@@ -10,4 +10,5 @@ typedef struct s_list {
 
 
 void mx_pop_front(t_list **list);
+
 #endif

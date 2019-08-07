@@ -11,4 +11,5 @@ typedef struct s_list {
 
 t_list *mx_create_node(void *data);
 void mx_push_back(t_list **list, void *data);
+
 #endif
