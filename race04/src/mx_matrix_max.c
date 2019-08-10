@@ -1,12 +1,11 @@
 #include "header.h"
 
 
-int max(int **grid,int ax, int ay,int He, int Wi)
-{
+int mx_matrix_max(int **grid,int ax, int ay,int He, int Wi) {
   int dx[4] = {1, 0, -1, 0};
   int dy[4] = {0, 1, 0, -1};
   int d, x, y, k;
-  bool stop;
+  bool stop = false;
   int maxim;
   int flag = 1;
   

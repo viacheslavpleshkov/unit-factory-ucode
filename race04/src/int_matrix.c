@@ -26,10 +26,6 @@ int **matrix (char *res, int *ryad, int *stovb) {
                 else if (res[j] == '.') {
                     mat[i][j] = -2;
                 }
-                else if (res[j] != ',' && res[j] != '\n') {
-                    mx_printerr("map error\n");
-                    exit(0);
-                }
             }
             else {
                 if (res[j + i * (s + 1)] == '#') {
@@ -37,10 +33,6 @@ int **matrix (char *res, int *ryad, int *stovb) {
                 }
                 else if (res[j + i * (s + 1)] == '.') {
                     mat[i][j] = -2;
-                }
-                else if (res[j + i * (s + 1)] != ',' && res[j + i * (s + 1)] != '\n') {
-                    mx_printerr("map error\n");
-                    exit(0);
                 }
             }
         }

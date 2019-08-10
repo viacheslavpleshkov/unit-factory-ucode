@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "header.h"
 
 char *mx_strnew(const int size) {
     char *str = malloc(size + 1);

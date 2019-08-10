@@ -1,7 +1,4 @@
-#include <stdbool.h>
-
-bool mx_isdigit(int c);
-bool mx_isspace(char c);
+#include "header.h"
 
 int mx_atoi(const char *str) {
     int res = 0;

@@ -1,7 +1,6 @@
 #include "header.h"
 
-bool lee(int **grid,int ax, int ay, int bx, int by,int He, int Wi, int *len,int *px,int *py)   // поиск пути из ячейки (ax, ay) в ячейку (bx, by)
-{
+bool mx_algorith_lee(int **grid,int ax, int ay, int bx, int by,int He, int Wi, int *len,int *px,int *py) {
   int dx[4] = {1, 0, -1, 0};
   int dy[4] = {0, 1, 0, -1};
   int d, x, y, k;

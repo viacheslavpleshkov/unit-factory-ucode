@@ -5,17 +5,6 @@ int main(int argc, char const *argv[]) {
       mx_printerr("usage: ./race04 [file_name] [x1] [y1] [x2] [y2]\n");
       exit(0);
   }
-  int src = open(argv[1], O_RDONLY);
-  if (src < 0) {
-      mx_printerr("map does not exist\n");
-      exit(0);
-  }
-  char s[1];
-  int n = read (src ,  s, sizeof(s));
-  if (n <= 0) {
-      mx_printerr("map does not exist\n");
-      exit(0);
-  }
 
   int ryad,stovb;
   int len;
@@ -25,20 +14,16 @@ int main(int argc, char const *argv[]) {
   char *str = mx_file_to_str(argv[1]);
   int **mat = matrix(str,&ryad,&stovb);
   int **mat1 = matrix(str,&ryad,&stovb);
-  if (x1 >= stovb || x2 >= stovb || x1 < 0 || x2 < 0
-  || y1 < 0 || y2< 0 || y1 >= ryad || y2 >= ryad) {
-       mx_printerr("points are out of map range\n");
-       exit(0);
-  }
+
   int px[ryad * stovb], py[ryad * stovb];
 
-  if (!lee(mat,x1,y1,x2,y2,ryad,stovb,&len,px,py)) {
+  if (!mx_algorith_lee(mat,x1,y1,x2,y2,ryad,stovb,&len,px,py)) {
        mx_printerr("route not found\n");
        exit(0);
   }
 
   mx_printstr("dist=");
-  mx_printint(max(mat1,x1,y1,ryad,stovb));
+  mx_printint(mx_matrix_max(mat1,x1,y1,ryad,stovb));
   mx_printstr("\n");
   mx_printstr("exit=");
   mx_printint(len);
