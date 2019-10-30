@@ -1,6 +1,33 @@
-#include "libmx.a"
+#include "./inc/libmx.h"
+#include <stdio.h>
+int main () {
 
-int main() {
-    mx_printchar('s');
-    return 0;
+printf (" mx_printchar ");
+mx_printchar('s');
+printf ("\n");
+
+printf (" mx_print_unicode ");
+mx_print_unicode(1111);
+printf ("\n");
+
+printf (" mx_printstr ");
+mx_printstr("Hello world");
+printf ("\n");
+
+printf (" mx_print_strarr ");
+char *arr[] = {"a","b","c","d", 0};
+mx_print_strarr(arr, ",");
+printf ("\n");
+
+printf (" mx_printint 124");
+mx_printint(124);
+printf ("\n");
+
+printf (" mx_pow 2^3 = 8");
+mx_printint(mx_pow(2,3));
+printf ("\n");
+
+printf("%i", mx_strlen("men"));
+printf (" mx_strlen men");
+printf ("\n");
 }

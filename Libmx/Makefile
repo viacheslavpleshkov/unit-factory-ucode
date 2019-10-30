@@ -4,7 +4,8 @@ CC = clang
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 LFLAGS = -Iinc
 
-SRC = mx_printchar.c 
+SRC = mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c mx_print_strarr.c \
+		mx_printint.c mx_pow.c
 
 OBJ_DIR = ./obj/
 SRC_DIR = ./src/
