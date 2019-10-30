@@ -7,7 +7,7 @@ mx_printchar('s');
 printf ("\n");
 
 printf (" mx_print_unicode ");
-mx_print_unicode(1111);
+mx_print_unicode(0x1F603);
 printf ("\n");
 
 printf (" mx_printstr ");
@@ -25,6 +25,10 @@ printf ("\n");
 
 printf (" mx_pow 2^3 = 8");
 mx_printint(mx_pow(2,3));
+printf ("\n");
+
+printf (" mx_pmx_sqrtow 9 = 3");
+mx_printint(mx_sqrt(9));
 printf ("\n");
 
 printf("%i", mx_strlen("men"));

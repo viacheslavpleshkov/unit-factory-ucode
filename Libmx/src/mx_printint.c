@@ -1,6 +1,5 @@
 #include "libmx.h"
 
-
 void mx_printint(int num) {
     if (num == -2147483648) {
         write(1, "-2147483648", 11);
