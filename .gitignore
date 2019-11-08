@@ -4,4 +4,4 @@
 *.out
 *.a
 .vscode
-.ide
+.idea
