@@ -20,8 +20,8 @@ unsigned long mx_hex_to_nbr(const char *hex);
 char *mx_itoa(int number);
 void mx_foreach(int *arr, int size, void (*f)(int));
 int mx_binary_search(char **arr, int size, const char *s, int *count);
+int mx_strcmp(const char *s1, const char *s2);
 int mx_bubble_sort(char **arr, int size);
-int mx_quicksort(char **arr, int left, int right);
 //String pack
 // int mx_strlen(const char *s);
 // void mx_swap_char(char *s1, char *s2);
