@@ -34,4 +34,7 @@ printf ("\n");
 printf("%i", mx_strlen("men"));
 printf (" mx_strlen men");
 printf ("\n");
+
+char *str = "follow * the white rabbit";
+printf("%i \n", mx_count_words(str, '*'));
 }
