@@ -1,15 +1,16 @@
 #include "libmx.h"
 
-char *mx_strstr(const char *haystack, const char *needle) {
-
-    while (*haystack)
+char *mx_strstr(const char *haystack, const char *needle)
+{
+    char *temphaystack = (char *)haystack;
+    char *tempneedle = (char *)needle;
+    while (*temphaystack)
     {
-        if (*haystack == needle)
+        if (!mx_strncmp(temphaystack, tempneedle, mx_strlen(tempneedle)))
         {
-            /* code */
+            return temphaystack;
         }
-        
-        haystack++;
+        temphaystack++;
     }
-    
+    return temphaystack;
 }
