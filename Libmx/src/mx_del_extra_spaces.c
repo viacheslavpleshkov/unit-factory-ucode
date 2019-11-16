@@ -1,4 +1,4 @@
-#include "./inc/libmx.h"
+#include "libmx.h"
 
 char *mx_del_extra_spaces(const char *str)
 {
@@ -25,14 +25,6 @@ char *mx_del_extra_spaces(const char *str)
         i++;
     }
     char *clear = mx_strtrim(memory);
-    free(memory);
+    free(clear);
     return clear;
-}
-
-int main()
-{
-    char name[] = "\f My name...    is \r Neo \t\n ";
-    char *p = mx_del_extra_spaces(name);
-    system("leaks a.out");
-    printf("%s", p);
 }
