@@ -1,38 +1,44 @@
 #include "./inc/libmx.h"
 
-char *mx_del_extra_spaces(const char *str)
+char **mx_strsplit(const char *s, char c)
 {
-    if (str == NULL)
-    {
-        return NULL;
-    }
+    int max = 0;
+    int min = 0;
 
-    char *memory = mx_strnew(mx_strlen(str));
+    bool flag = true;
     int i = 0, j = 0;
-    while (str[i])
-    {
-        if (!(mx_is_space(str[i])))
-        {
-            memory[j] = str[i];
-            j++;
-        }
-        if (!(mx_is_space(str[i])) && mx_is_space(str[i + 1]))
-        {
-            memory[j] = ' ';
-            j++;
-        }
+    char **new = (char **)malloc(sizeof(char *) * (mx_count_words(s, c) + 1));
 
+    while (s[i])
+    {
+        if ((s[i] == c) && (flag == true))
+        {
+            min = i;
+            flag = false;
+            continue;
+        }
+        if ((s[i] == c) && (flag == false))
+        {
+            max = i;
+            flag = true;
+            if (min + 1 == max)
+            {
+                continue;
+            }
+
+            new[j] = mx_strndup(&s[min + 1], max - min - 1);
+
+            j++;
+        }
         i++;
     }
-    char *clear = mx_strtrim(memory);
-    free(memory);
-    return clear;
+    new[j] = NULL;
+    return new;
 }
 
 int main()
 {
-    char name[] = "\f My name...    is \r Neo \t\n ";
-    char *p = mx_del_extra_spaces(name);
-    system("leaks a.out");
-    printf("%s", p);
+    char s[] = "*Good bye,**Mr.*Anderson.****";
+    char **arr = mx_strsplit(s, '*');
+    printf("%s", arr[1]);
 }
