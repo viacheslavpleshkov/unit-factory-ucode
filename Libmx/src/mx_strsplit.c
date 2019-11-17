@@ -2,34 +2,21 @@
 
 char **mx_strsplit(const char *s, char c)
 {
-    int max = 0;
-    int min = 0;
-
-    bool flag = true;
-    int i = 0, j = 0;
-    //memory
-	char **new = (char **)malloc(sizeof(char *) * (mx_count_words(s, c) + 1));
-
+    if (!s)
+    {
+        return NULL;
+    }
+    
+    int i = 0, j = 0, countlet = 0;
+    char **new = (char **)malloc(sizeof(char *) * (mx_count_words(s, c) + 1));
     while (s[i])
     {
-        if ((s[i] == c) && (flag = true))
+        if (s[i] != c)
         {
-            min = i;
-            flag = false;
-        }
-        else
-        {
-            max = i;
-            flag = true;
-        }
-
-        if ((max != 0) && (min != 0) && (flag = true))
-        {
-            new[j] = mx_strnew(max -min);
+            countlet = mx_count_letters(&s[i], c);
+            new[j] = mx_strndup(&s[i], countlet);
             j++;
-            min =0;
-            max = 0;
-
+            i += countlet;
         }
         i++;
     }

@@ -1,12 +1,12 @@
 #ifndef libmx_h
 #define libmx_h
 
-#include <unistd.h>
+#include <unistd.h> 
 #include <stdlib.h>
 #include <wchar.h>
 #include <stdbool.h>
 #include <fcntl.h>
-#include <stdio.h>
+#include <malloc/malloc.h>
 
 // Utils pack
 void mx_printchar(char c);
@@ -45,20 +45,21 @@ char *mx_strnew(const int size);
 int mx_is_space(char c);
 char *mx_strtrim(const char *str);
 char *mx_del_extra_spaces(const char *str);
-// char **mx_strsplit(const char *s, char c);
+int mx_count_letters(const char *s, char c);
+char **mx_strsplit(const char *s, char c);
 char *mx_strjoin(const char *s1, const char *s2);
-// char *mx_file_to_str(const char *file);
-// char *mx_replace_substr(const char *str, const char *sub, const char *replace);
+char *mx_file_to_str(const char *file);
+char *mx_replace_substr(const char *str, const char *sub, const char *replace);
 //Memory pack
 void *mx_memset(void *b, int c, size_t len);
 void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n);
-// void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 int mx_memcmp(const void *s1, const void *s2, size_t n);
-// void *mx_memchr(const void *s, int c, size_t n);
-// void *mx_memrchr(const void *s, int c, size_t n);
-// void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len);
-// void *mx_memmove(void *dst, const void *src, size_t len);
-// void *mx_realloc(void *ptr, size_t size);
+void *mx_memchr(const void *s, int c, size_t n);
+void *mx_memrchr(const void *s, int c, size_t n);
+void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len);
+void *mx_memmove(void *dst, const void *src, size_t len);
+void *mx_realloc(void *ptr, size_t size);
 //List pack
 typedef struct s_list
 {
