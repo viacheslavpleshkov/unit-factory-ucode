@@ -34,7 +34,6 @@ char *mx_nbr_to_hex(unsigned long nbr)
 		b = hex[i];
 		hex[i] = hex[x];
 		hex[x] = b;
-		printf("%c\n", hex[x]);
 	}
 
 	return hex;

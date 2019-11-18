@@ -9,7 +9,7 @@ void *mx_memmem(const void *big, size_t big_len, const void *little, size_t litt
 
 		while (*where)
 		{
-			if (mx_memcmp(where, what, little_len) == 0)
+			if (mx_memcmp(where, what, little_len - 1) == 0)
 			{
 				return where;
 			}

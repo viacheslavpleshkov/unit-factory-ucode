@@ -2,13 +2,16 @@
 
 void mx_push_back(t_list **list, void *data)
 {
-    if (*list == NULL || list == NULL)
+    if (!list || !data)
     {
         return;
     }
     //new
     t_list *back_list = mx_create_node(data);
-
+    if (!back_list)
+    {
+        return;
+    }
     t_list *temp = *list;
     //check when this array will NULL
     while (temp->next != NULL)

@@ -34,3 +34,6 @@ clean:
 uninstall: clean
 	@rm -f $(NAME)
 reinstall: uninstall all
+
+m: 
+	@clang -std=c11 -Wall -Wextra -Werror -Wpedantic main.c libmx.a

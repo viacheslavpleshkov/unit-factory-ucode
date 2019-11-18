@@ -1,6 +1,6 @@
 #include "libmx.h"
 
-char *mx_replace(const char *str, const char *sub, const char *replace)
+char *mx_replace_substr(const char *str, const char *sub, const char *replace)
 {
 	if (!sub || !replace || mx_strlen(str) <= mx_strlen(sub))
 	{
@@ -23,7 +23,6 @@ char *mx_replace(const char *str, const char *sub, const char *replace)
 					new[i] = replace[j];
 					i++;
 					j++;
-					continue;
 				}
 			}
 			new[i] = *str;
