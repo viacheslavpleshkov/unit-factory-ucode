@@ -3,7 +3,7 @@
 void mx_pop_back(t_list **head)
 {
     //validate node
-    if (*head == NULL || head == NULL)
+    if (*head == NULL)
     {
         return;
     }
@@ -12,13 +12,10 @@ void mx_pop_back(t_list **head)
     {
         free(*head);
         *head = NULL;
-        return;
     }
     else
     {
         t_list *temp = *head;
-        if (!temp)
-            return;
         while (temp && temp->next->next != NULL)
             temp = temp->next;
         free(temp->next);

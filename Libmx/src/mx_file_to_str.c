@@ -1,4 +1,5 @@
 #include "libmx.h"
+#include <stdio.h>
 
 char *mx_file_to_str(const char *file)
 {
@@ -8,20 +9,30 @@ char *mx_file_to_str(const char *file)
     char *str;
     if (fd < 0)
     {
+        close(fd);
         return NULL;
     }
     else if (read(fd, (void *)0, 0) < 0)
     {
+        close(fd);
+        return NULL;
+    }
+    else if (!file)
+    {
+        close(fd);
         return NULL;
     }
     else
     {
-        //counter string
         while (read(fd, &buf, 1))
         {
             len++;
         }
         close(fd);
+        if (len == 0)
+        {
+            return NULL;
+        }
         fd = open(file, O_RDONLY);
         str = mx_strnew(len);
         for (int i = 0; read(fd, &buf, 1); i++)
@@ -29,5 +40,4 @@ char *mx_file_to_str(const char *file)
         close(fd);
         return str;
     }
-    return NULL;
 }

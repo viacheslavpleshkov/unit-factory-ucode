@@ -2,14 +2,17 @@
 
 void mx_push_front(t_list **list, void *data)
 {
-    if (*list == NULL || list == NULL)
+    t_list *front_list = mx_create_node(data);
+    if (*list == NULL)
     {
-        return;
+        *list = front_list;
     }
-    t_list *new_node = mx_create_node(data);
-    t_list *temp = NULL;
+    else
+    {
+        t_list *temp = NULL;
 
-    temp = *list;
-    *list = new_node;
-    new_node->next = temp;
+        temp = *list;
+        *list = front_list;
+        front_list->next = temp;
+    }
 }

@@ -25,6 +25,6 @@ char *mx_del_extra_spaces(const char *str)
         i++;
     }
     char *clear = mx_strtrim(memory);
-    free(clear);
+    free(memory);
     return clear;
 }

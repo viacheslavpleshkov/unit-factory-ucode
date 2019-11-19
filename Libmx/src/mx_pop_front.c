@@ -3,7 +3,7 @@
 void mx_pop_front(t_list **head)
 {
     //validate node
-    if (*head == NULL || head == NULL)
+    if (*head == NULL)
     {
         return;
     }
@@ -12,15 +12,11 @@ void mx_pop_front(t_list **head)
     {
         free(*head);
         *head = NULL;
-        return;
     }
     else
     {
-        t_list *temp = (*head)->next; // select next node
-        //validate
-        if (!temp)
-            return;
-        free(*head);  // delate
-        *head = temp; // value node
+        t_list *temp = (*head)->next;
+        free(*head);
+        *head = temp;
     }
 }

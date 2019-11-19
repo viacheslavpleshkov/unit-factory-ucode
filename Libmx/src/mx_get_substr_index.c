@@ -2,16 +2,18 @@
 
 int mx_get_substr_index(const char *str, const char *sub)
 {
-    char *temp = mx_strstr(str, sub);
+    if (sub && str)
+    {
+        int index = 0, sublen = mx_strlen(sub);
 
-    if (str == NULL || sub == NULL)
-    {
-        return -2;
-    }
-    else if (temp == NULL)
-    {
+        while (*str)
+        {
+            if (mx_strncmp(str, sub, sublen) == 0)
+                return index;
+            index++;
+            str++;
+        }
         return -1;
     }
-
-    return temp - str;
+    return -2;
 }
