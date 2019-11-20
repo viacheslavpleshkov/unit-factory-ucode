@@ -1,0 +1,3 @@
+[submodule "endgame"]
+	path = Endgame
+	url = https://github.com/slava-pleshkov/a-story-of-one-fish

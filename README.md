@@ -12,8 +12,16 @@
 
 ## Used technologies
 
-C, Ncurses, Makefile, Terminal, Unix
+C, Ncurses, Makefile, Terminal, Bash, Unix, Challenge Based Learning framework
 
+## C
+1. Marathon C | Learning C
+1. Endgame | Create a game on C
+1. Refresh Marathon C | The challenge to refresh all the knowledge you have gained at Marathon C.
+1. Libmx | Create your own C library.
+1. Pathfinder | Learn pathfinding algorithms.
+1. uls | Recode the system's utility ls.
+1. ush | Develop your own shell.
 
 ## License
 
