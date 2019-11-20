@@ -1,9 +1,9 @@
 <p align="center">
     <a href="https://unit.ua/en/" target="_blank">
-        <img src="https://unit.ua/static/img/logo.png" height="100px">
+        <img src="https://github.com/slava-pleshkov/unit-factory-ucode/unit_logo.png?raw=true" height="100px">
     </a>
     <a href="https://apply.ucode.world/" target="_blank">
-        <img src="https://apply.ucode.world/assets/images/ucode-logo.png" height="100px">
+        <img src="https://github.com/slava-pleshkov/unit-factory-ucode/ucode_logo.png?raw=true" height="100px">
     </a>
     <h1 align="center">unit-factory-ucode</h1>
     <br>
