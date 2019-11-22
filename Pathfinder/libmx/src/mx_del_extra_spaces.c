@@ -8,7 +8,9 @@ char *mx_del_extra_spaces(const char *str)
     }
 
     char *memory = mx_strnew(mx_strlen(str));
+
     int i = 0, j = 0;
+    
     while (str[i])
     {
         if (!(mx_is_space(str[i])))
@@ -26,5 +28,6 @@ char *mx_del_extra_spaces(const char *str)
     }
     char *clear = mx_strtrim(memory);
     free(memory);
+
     return clear;
 }

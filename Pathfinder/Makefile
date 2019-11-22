@@ -1,20 +1,18 @@
 NAME = pathfinder
 
-INC = ./inc/pathfinder.h
+INC = pathfinder.h
+CC = clang
 
-HEADTMP = ./pathfinde
-
-SRC = ./main.c \
-
-SRCS = ./src/main.c \
-
-OBJ = ./main.o \
-
-OBJO = ./obj/main.o \
-	
 CFLGS = -std=c11 -Wall -Wextra -Wpedantic -Werror 
 
-all: install uninstall
+SRC = main.c 
+	
+OBJ_DIR = ./obj/
+SRC_DIR = ./src/
+
+OBJ = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
+
+all: install clean
 
 install:
 	@cd libmx && make -f Makefile install
