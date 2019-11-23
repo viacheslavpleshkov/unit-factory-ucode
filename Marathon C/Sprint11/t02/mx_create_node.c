@@ -1,12 +1,19 @@
 #include "list.h"
 
-t_list *mx_create_node(void *data) {
-	//memory
-    t_list *new = malloc(sizeof(t_list));
-    //struct data
-    new->data = data;
-    //struct next
-    new->next = NULL;
-    //return new
-    return new;
+t_list *mx_create_node(void *data)
+{
+    if (!data)
+    {
+        return NULL;
+    }
+    else
+    {
+        t_list *new_node = (t_list *)malloc(sizeof(t_list));
+        if (!new_node)
+            return NULL;
+        new_node->data = data;
+        new_node->next = NULL;
+
+        return new_node;
+    }
 }

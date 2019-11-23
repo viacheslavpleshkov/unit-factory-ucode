@@ -1,13 +1,19 @@
 int mx_strlen(const char *s);
 
-char *mx_strcat(char *s1, const char *s2) {
-    int s1_len = mx_strlen(s1);
-    int s2_len = mx_strlen(s2);
-    int total_len = s1_len + s2_len;
+char *mx_strcat(char *restrict s1, const char *restrict s2)
+{
+    int s1_size = mx_strlen(s1);
+    int s2_size = mx_strlen(s2);
+    int i = s1_size;
+    int j = 0;
 
-    for (int i = s1_len, j = 0; i < total_len; i++, j++) {
+    while (i < (s1_size + s2_size))
+    {
         s1[i] = s2[j];
+        i++;
+        j++;
     }
-    s1[total_len] = '\0';
-    return &s1[0];
+    s1[i++] = '\0';
+    
+    return s1;
 }

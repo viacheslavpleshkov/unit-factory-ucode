@@ -1,33 +1,19 @@
 int mx_mid(int a, int b, int c)
 {
-    if (a > b)
+    int mid;
+
+    if ((a <= b && b <= c) || (c <= b && b <= a))
     {
-        if (a > c)
-        {
-            return b;
-        }
-        else if (c > a)
-        {
-            return a;
-        }
-        else
-        {
-            return c;
-        }
+        mid = b;
     }
-    else
+    if ((b <= c && c <= a) || (a <= c && c <= b))
     {
-        if (b < c)
-        {
-            return b;
-        }
-        else if (c < a)
-        {
-            return a;
-        }
-        else
-        {
-            return c;
-        }
+        mid = c;
     }
+    if ((b <= a && a <= c) || (c <= a && a <= b))
+    {
+        mid = a;
+    }
+
+    return mid;
 }

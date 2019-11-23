@@ -4,14 +4,11 @@ void mx_strcpy(char *dst, const char *src);
 int mx_strlen(const char *s);
 char *mx_strnew(const int size);
 
-char *mx_strdup(const char *str){
-    int size = mx_strlen(str);
-    char* new = mx_strnew(size);
-    if (new == NULL) {
-        return NULL;
-    }
-    
-    mx_strcpy(new, str);
+char *mx_strdup(const char *s1)
+{
+    char *duplicate = mx_strnew(mx_strlen(s1));
 
-    return new;
+    mx_strcpy(duplicate, s1);
+    
+    return duplicate;
 }

@@ -2,25 +2,23 @@
 
 bool mx_isdigit(int c);
 
-int mx_atoi(const char *str) {
-    long long sum = 0;
-    int sign = 1;
+bool mx_atoi(const char *str, int *num)
+{
+    int sum = 0;
+    int sign = 0;
 
-    if (*str == '-' && mx_isdigit(*(str + 1)))
-        sign = -1;
-    if ((*str == '+' || *str == '-') && mx_isdigit(*(str + 1)))
-        str++;
+    if (*str != '+' && *str != '-' && !st_isdigit(*str))
+        return false;
 
-    while (*str && mx_isdigit(*str)) {
-        sum = sum * 10 + (*str++ - 48);
-        if (sum > 2147483647 && sign == 1)
-            return 2147483647;
-        if (sum > 2147483648 && sign == 0)
-            return -2147483648;
-    }
+    if (*str == '+' || *str == '-')
+        sign = *str++ == '-';
+
+    while (*str && st_isdigit(*str))
+        sum = sum * 10 + *str++ - 48;
 
     if (*str)
-        return 0;
+        return false;
 
-    return sum * sign;
+    *num = sign ? -sum : sum;
+    return true;
 }

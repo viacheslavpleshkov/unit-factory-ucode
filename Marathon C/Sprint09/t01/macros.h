@@ -1,5 +1,5 @@
-#ifndef MACROS_H
-#define MACROS_H
+#ifndef macros_h
+#define macros_h
 
 #define MX_SUM(x,y) ((x + y))
 #define MX_MULT(x,y) ((x * y))

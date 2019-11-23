@@ -1,9 +1,13 @@
-#include <stdbool.h> 
+#include <stdbool.h>
 
-bool mx_islower(int c){
-    if ('a' <= c && c <= 'z') {
+bool mx_islower(int c)
+{
+    if ('a' <= c && c <= 'z')
+    {
         return 1;
-    } else {
+    }
+    else
+    {
         return 0;
     }
 }

@@ -1,16 +1,40 @@
-unsigned long mx_hex_to_nbr(const char *hex) {
-	unsigned long res = 0;
+#include <stdlib.h>
 
-	for (int i = 0; hex[i] != '\0'; ++i) {
-        if (hex[i] >= '0' && hex[i] <= '9' ){
-        	res = res * 16  + (hex[i] - 48);
-        }
-        else if (hex[i] >= 'A' && hex[i] <= 'F' ){
-        	res = res * 16  + (hex[i] - 55);
-        }
-        else if (hex[i] >= 'a' && hex[i] <= 'f' ){
-        	res = res * 16  + (hex[i] - 87);
+unsigned long mx_hex_to_nbr(const char *hex)
+{
+    int len = 0;
+    unsigned long num = 0;
+    unsigned long base = 1;
+
+    if (hex != NULL)
+    {
+        while (hex[len])
+        {
+            len++;
         }
     }
-    return res;
+    else
+    {
+        return num;
+    }
+    for (int i = 0; i <= len; i++)
+    {
+        if (hex[len - i] >= '0' && hex[len - i] <= '9')
+        {
+            num = num + (hex[len - i] - 48) * base;
+            base = base * 16;
+        }
+        if (hex[len - i] >= 'A' && hex[len - i] <= 'F')
+        {
+            num = num + (hex[len - i] - 55) * base;
+            base = base * 16;
+        }
+        if (hex[len - i] >= 'a' && hex[len - i] <= 'f')
+        {
+            num = num + (hex[len - i] - 87) * base;
+            base = base * 16;
+        }
+    }
+
+    return num;
 }

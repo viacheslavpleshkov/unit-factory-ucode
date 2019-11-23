@@ -2,23 +2,22 @@
 
 void mx_printchar(char c);
 
-void mx_printint(int n) {
-    int reverse = 0;
-    int end = n;
-if (n < 0) {
-    mx_printchar('-');
-    n = n * -1;
-}
-while (n != 0) {
-    reverse = reverse * 10 + (n % 10); 
-    n = n / 10;
-}
-while (reverse != 0) {
-    mx_printchar(reverse % 10 + 48);
-    reverse = (reverse - 1) / 10;
-}
-while (end % 10 == 0) {    
-   mx_printchar ('0');
-    end = end / 10;
-}
+void mx_printint(int num)
+{
+    if (num == -2147483648)
+    {
+        write(1, "-2147483648", 11);
+
+        return;
+    }
+    if (num < 0)
+    {
+        mx_printchar('-');
+        num *= -1;
+    }
+    if (num > 9)
+    {
+        mx_printint(num / 10);
+    }
+    mx_printchar(num % 10 + 48);
 }

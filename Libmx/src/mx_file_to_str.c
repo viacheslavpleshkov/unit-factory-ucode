@@ -9,7 +9,7 @@ int validation_file(const char *file)
         close(fd);
         return 0;
     }
-    else if (read(fd, (void *)0, 0) < 0)
+    else if (fd == -1)
     {
         close(fd);
         return 0;

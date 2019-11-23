@@ -59,6 +59,18 @@ void *mx_memrchr(const void *s, int c, size_t n);
 void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len);
 void *mx_memmove(void *dst, const void *src, size_t len);
 void *mx_realloc(void *ptr, size_t size);
+//Alphabet pack
+void mx_is_positive(int i);
+bool mx_is_odd(int value);
+bool mx_isalpha(int c);
+bool mx_isdigit(int c);
+bool mx_islower(int c);
+bool mx_isupper(int c);
+int mx_tolower(int c);
+int mx_toupper(int c);
+bool mx_multiple_number(int n, int mult);
+int mx_max(int a, int b, int c);
+int mx_mid(int a, int b, int c);
 //List pack
 typedef struct s_list
 {

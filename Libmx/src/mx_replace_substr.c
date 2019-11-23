@@ -8,8 +8,8 @@ char *mx_replace_substr(const char *str, const char *sub, const char *replace)
 	}
 	else
 	{
-		int num = (mx_strlen(replace) - mx_strlen(sub);
-		int len = mx_strlen(str) + mx_count_substr(str, sub) * num);
+		int sum = mx_strlen(replace) - mx_strlen(sub);
+		int len = mx_strlen(str) + mx_count_substr(str, sub) * sum;
 		char *memory = mx_strnew(len);
 		int i = 0;
 		int j = 0;

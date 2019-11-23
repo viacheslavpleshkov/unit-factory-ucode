@@ -1,14 +1,14 @@
 #include <stdlib.h>
 
 char *mx_strcpy(char *dst, const char *src);
-
 int mx_strlen(const char *s);
-
 char *mx_strnew(const int size) ;
 
-char *mx_strdup(const char *str){
-	char *res = mx_strnew(mx_strlen(str));
+char *mx_strdup(const char *s1)
+{
+    char *duplicate = mx_strnew(mx_strlen(s1));
 
-	mx_strcpy(res, str);
-	return res;
+    mx_strcpy(duplicate, s1);
+    
+    return duplicate;
 }

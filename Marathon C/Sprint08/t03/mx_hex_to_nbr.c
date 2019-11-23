@@ -1,4 +1,4 @@
-#include "hex_to_nbr.h"
+#include <stdlib.h>
 #include <stdbool.h>
 
 bool mx_isdigit(int c);
@@ -7,36 +7,41 @@ bool mx_isdigit(int c);
 bool mx_islower(int c);
 bool mx_isupper(int c);
 
-static int val(char c) { 
-    if (mx_isdigit(c)) 
-        return (int)c - '0'; 
+unsigned long mx_hex_to_nbr(const char *hex)
+{
+    int len = 0;
+    unsigned long num = 0;
+    unsigned long base = 1;
+
+    if (hex != NULL)
+    {
+        while (hex[len])
+        {
+            len++;
+        }
+    }
     else
-        return (int)c - 'A' + 10; 
-} 
-
-static int mx_strlen(const char *s) {
-    int i = 0;
-    while (s[i]) {
-        i++;
+    {
+        return num;
     }
-    return i;
+    for (int i = 0; i <= len; i++)
+    {
+        if (hex[len - i] >= '0' && hex[len - i] <= '9')
+        {
+            num = num + (hex[len - i] - 48) * base;
+            base = base * 16;
+        }
+        if (hex[len - i] >= 'A' && hex[len - i] <= 'F')
+        {
+            num = num + (hex[len - i] - 55) * base;
+            base = base * 16;
+        }
+        if (hex[len - i] >= 'a' && hex[len - i] <= 'f')
+        {
+            num = num + (hex[len - i] - 87) * base;
+            base = base * 16;
+        }
+    }
+
+    return num;
 }
-
-unsigned long mx_hex_to_nbr(const char *hex) { 
-    int leng = mx_strlen(hex); 
-    int power = 1; 
-    int num = 0;  
-    int i; 
-    if(!mx_isalpha(*hex)) {
-        return 0;
-    }
-    
-    for (i = leng - 1; i >= 0; i--) { 
-        if (val(hex[i]) >= 16) { 
-           return -1; 
-        } 
-        num += val(hex[i]) * power; 
-        power = power * 16; 
-    }
-    return num; 
-} 

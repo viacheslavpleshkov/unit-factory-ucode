@@ -1,8 +1,20 @@
 #include "list.h"
 
-void mx_pop_front(t_list **list) {
-    t_list *temp = *list;
-    *list = temp->next;
-    free(temp);
-    temp = NULL;
+void mx_pop_front(t_list **head)
+{
+    if (head == NULL || *head == NULL)
+    {
+        return;
+    }
+    if ((*head)->next == NULL)
+    {
+        free(*head);
+        *head = NULL;
+    }
+    else
+    {
+        t_list *temp = (*head)->next;
+        free(*head);
+        *head = temp;
+    }
 }
