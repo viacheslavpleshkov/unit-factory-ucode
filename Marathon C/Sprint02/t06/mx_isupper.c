@@ -1,9 +1,13 @@
-#include <stdbool.h> 
+#include <stdbool.h>
 
-bool mx_isupper(int c) {
-    if ('A' <= c && c <= 'Z') {
+bool mx_isupper(int c)
+{
+    if ('A' <= c && c <= 'Z')
+    {
         return 1;
-    } else {
+    }
+    else
+    {
         return 0;
     }
 }

@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include <time.h>
-
-int main ()
+int mx_sqrt(int x)
 {
-    time_t seconds;
+    for (int i = 1; i <= x / i; ++i)
+    {
+        if (i * i == x)
+        {
+            return i;
+        }
+    }
 
-    seconds = time(NULL);
-    printf("Seconds since January 1, 1970 = %ld\n", seconds);
-
-    return(0);
+    return 0;
 }

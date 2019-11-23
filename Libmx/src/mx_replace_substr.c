@@ -6,12 +6,13 @@ char *mx_replace_substr(const char *str, const char *sub, const char *replace)
 	{
 		return NULL;
 	}
+	else
 	{
-		//Memory
-		int len = mx_strlen(str) + mx_count_substr(str, sub) * (mx_strlen(replace) - mx_strlen(sub));
-		char *new = mx_strnew(len);
-
-		int i = 0, j = 0;
+		int num = (mx_strlen(replace) - mx_strlen(sub);
+		int len = mx_strlen(str) + mx_count_substr(str, sub) * num);
+		char *memory = mx_strnew(len);
+		int i = 0;
+		int j = 0;
 
 		while (i < len)
 		{
@@ -20,15 +21,16 @@ char *mx_replace_substr(const char *str, const char *sub, const char *replace)
 				str += mx_strlen(sub);
 				while (j < mx_strlen(replace))
 				{
-					new[i] = replace[j];
+					memory[i] = replace[j];
 					i++;
 					j++;
 				}
 			}
-			new[i] = *str;
+			memory[i] = *str;
 			str++;
 			i++;
 		}
-		return new;
+
+		return memory;
 	}
 }

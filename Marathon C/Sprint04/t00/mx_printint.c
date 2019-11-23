@@ -1,30 +1,23 @@
 #include <unistd.h>
+
 void mx_printchar(char c);
 
-void mx_printint(int n) {
-    int count = 0;
-    int num = n;
-    int degree = 1;
+void mx_printint(int num)
+{
+    if (num == -2147483648)
+    {
+        write(1, "-2147483648", 11);
 
-    if(n < 0) {
+        return;
+    }
+    if (num < 0)
+    {
         mx_printchar('-');
-        n = n * (-1);
-        num = n;
+        num *= -1;
     }
-    if(n == 0) {
-        mx_printchar('0');
+    if (num > 9)
+    {
+        mx_printint(num / 10);
     }
-    while(n % 10 != 0) {
-        n /= 10;
-        ++count;
-    }
-    for(int i = 1; i < count; ++i) {
-        degree = degree * 10;
-    }
-    while(num > 0) {
-        int dig = num / degree + 48;
-        mx_printchar(dig);
-        num %= degree;
-        degree = degree / 10;
-    }
+    mx_printchar(num % 10 + 48);
 }

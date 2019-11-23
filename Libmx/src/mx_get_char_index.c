@@ -2,18 +2,23 @@
 
 int mx_get_char_index(const char *str, char c)
 {
-    if (str == NULL)
+    if (!str)
     {
         return -2;
     }
-    int i = 0;
-    while (str[i])
+    else
     {
-        if (str[i] == c)
+        int i = 0;
+
+        while (str[i])
         {
-            return i;
+            if (str[i] == c)
+            {
+                return i;
+            }
+            i++;
         }
-        i++;
+        
+        return -1;
     }
-    return -1;
 }

@@ -7,12 +7,14 @@ char *mx_nbr_to_hex(unsigned long nbr)
 	unsigned long copy = nbr;
 	int p = 0;
 	char b;
+	char *hex = NULL;
+
 	while (nbr >= 16)
 	{
 		nbr = nbr / 16;
 		i++;
 	}
-	char *hex = mx_strnew(i);
+	hex = mx_strnew(i);
 
 	while (copy > 0)
 	{
