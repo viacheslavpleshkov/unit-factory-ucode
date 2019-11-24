@@ -9,7 +9,7 @@ OBJD	=	obj
 INC		=	libmx.h
 INCS	=	$(addprefix $(INCD)/, $(INC))
 
-SRC	= 	mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c mx_print_strarr.c \
+SRC	= 	mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c mx_printerr.c mx_print_strarr.c \
 		mx_printint.c mx_pow.c mx_sqrt.c mx_nbr_to_hex.c mx_hex_to_nbr.c mx_itoa.c \
 		mx_foreach.c mx_binary_search.c mx_strcmp.c mx_bubble_sort.c mx_swap_char.c \
 		mx_str_reverse.c mx_strdel.c mx_del_strarr.c mx_get_char_index.c mx_strdup.c mx_strndup.c\
