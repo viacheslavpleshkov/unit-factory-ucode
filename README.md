@@ -14,8 +14,6 @@
 
 C, Ncurses, Makefile, File system, Terminal, Bash, Unix, CBL framework
 
-<a href="https://www.evernote.com/pub/mail16971/unit-factory-ucode" class="center" target="_blank">My traces for all</a>
-
 ## My test case for all
 
 <a href="https://www.evernote.com/pub/mail16971/unit-factory-ucode" target="_blank" align="center">
