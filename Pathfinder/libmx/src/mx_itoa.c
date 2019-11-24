@@ -6,6 +6,7 @@ char *mx_itoa(int number)
 	int i = 0;
 	char *num;
 	int flag = 0;
+
 	if (number == -2147483648)
 	{
 		num = "-2147483648";
@@ -34,5 +35,6 @@ char *mx_itoa(int number)
 	{
 		num[0] = '-';
 	}
+	
 	return num;
 }

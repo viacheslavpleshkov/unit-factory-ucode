@@ -1,10 +1,15 @@
-NAME = libmx.a
-CC = clang
+NAME	=	libmx.a
 
-CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
-LFLAGS = -Iinc
+CFLG	=	-std=c11 -Wall -Wextra -Werror -Wpedantic
 
-SRC = mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c mx_print_strarr.c \
+SRCD	=	src
+INCD	=	inc
+OBJD	=	obj
+
+INC		=	libmx.h
+INCS	=	$(addprefix $(INCD)/, $(INC))
+
+SRC	= 	mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c mx_print_strarr.c \
 		mx_printint.c mx_pow.c mx_sqrt.c mx_nbr_to_hex.c mx_hex_to_nbr.c mx_itoa.c \
 		mx_foreach.c mx_binary_search.c mx_strcmp.c mx_bubble_sort.c mx_swap_char.c \
 		mx_str_reverse.c mx_strdel.c mx_del_strarr.c mx_get_char_index.c mx_strdup.c mx_strndup.c\
@@ -16,25 +21,35 @@ SRC = mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c mx_print_strar
 		mx_islower.c mx_isupper.c mx_tolower.c mx_toupper.c mx_multiple_number.c mx_max.c mx_mid.c \
 		mx_create_node.c mx_push_front.c mx_push_back.c mx_pop_front.c mx_pop_back.c mx_list_size.c mx_sort_list.c
 
-OBJ_DIR = ./obj/
-SRC_DIR = ./src/
-
-OBJ = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
-
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) $(LFLAGS) -o $@ -c $<
+SRCS	=	$(addprefix $(SRCD)/, $(SRC))
+OBJS	=	$(addprefix $(OBJD)/, $(SRC:%.c=%.o))
 
 all: install clean
+	
+install: $(NAME)
 
-install: $(OBJ)
-	@mkdir -p $(OBJ_DIR)
-	@ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJS)
+	@ar rcs $@ $^
+	@printf "\r\33[2K$@\t   \033[32;1mcreated\033[0m\n"
+
+$(OBJD)/%.o: $(SRCD)/%.c $(INCS)
+	@clang $(CFLG) -c $< -o $@ -I$(INCD)
+	@printf "\r\33[2K$(NAME)\t   \033[33;1mcompile \033[0m$(<:$(SRCD)/%.c=%) "
+
+$(OBJS): | $(OBJD)
+
+$(OBJD):
+	@mkdir -p $@
+
 clean:
-	@rm -rf $(OBJ_DIR)
+	@rm -rf $(OBJD)
+	@printf "$(OBJD)\t   \033[31;1mdeleted\033[0m\n"
+
 uninstall: clean
-	@rm -f $(NAME)
-reinstall: uninstall all
+	@rm -rf $(NAME)
+	@printf "$(NAME)\t   \033[31;1muninstalled\033[0m\n"
+
+reinstall: uninstall install
 
 start: 
-	@clang -std=c11 -Wall -Wextra -Werror -Wpedantic main.c libmx.a
+	@clang -std=c11 -Wall -Wextra -Werror -Wpedantic main.c libmx.a && ./a.out

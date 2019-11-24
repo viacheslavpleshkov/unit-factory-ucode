@@ -2,7 +2,7 @@
 
 char *mx_replace_substr(const char *str, const char *sub, const char *replace)
 {
-	if (!sub || !replace || mx_strlen(str) <= mx_strlen(sub))
+	if (!str || !sub || !replace || mx_strlen(str) <= mx_strlen(sub))
 	{
 		return NULL;
 	}

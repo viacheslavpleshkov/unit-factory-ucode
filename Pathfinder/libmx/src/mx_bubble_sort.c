@@ -18,5 +18,6 @@ int mx_bubble_sort(char **arr, int size)
             }
         }
     }
+    
     return count;
 }

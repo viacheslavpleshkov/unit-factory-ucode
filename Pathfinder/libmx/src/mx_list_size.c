@@ -3,6 +3,7 @@
 int mx_list_size(t_list *list)
 {
     int i = 0;
+    
     if (list)
     {
         t_list *tmp = list;
@@ -12,5 +13,6 @@ int mx_list_size(t_list *list)
             tmp = tmp->next;
         }
     }
+
     return i;
 }

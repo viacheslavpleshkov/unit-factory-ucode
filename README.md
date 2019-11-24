@@ -14,6 +14,8 @@
 
 C, Ncurses, Makefile, File system, Terminal, Bash, Unix, CBL framework
 
+<a href="https://www.evernote.com/pub/mail16971/unit-factory-ucode" class="center" target="_blank">My traces</a>
+
 ## Track C
 1. Marathon C | Learning C (Done)
 1. Endgame | Create a game on C (Done)
