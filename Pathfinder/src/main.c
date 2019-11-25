@@ -4,20 +4,17 @@
 
 int main(int argc, char *argv[])
 {
-    if (argc == 1)
-    {
-        mx_printerr("usage: ./pathfinder [filename]\n");
-        return 0;
-    }
-    // if (argv[1] != NULL || mx_file_to_str(argv[1]) == NULL)
-    // {
-    //     mx_printerr("error: file ");
-    //     mx_printerr(argv[1]);
-    //     mx_printerr(" doesn't exist\n");
-    //     return 0;
-    // }
-    char *arr = mx_file_to_str(argv[1]);
-    printf("%s", arr);
-    
+    int fd;
+    char **arr = NULL;
+
+    if (argc != 2)
+        mx_printerr_pf(INVLD_CMD_ARGS, NULL);
+
+    fd = open(argv[1], O_RDONLY);
+    if (read(fd, 0, 0) < 0)
+        mx_printerr_pf(FILE_DEXIST, argv[1]);
+
+    arr = mx_parse_file(argv[1]);
+    mx_print_strarr(arr, "\n");
     return 0;
 }
