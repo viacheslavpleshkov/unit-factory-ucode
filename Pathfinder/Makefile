@@ -13,7 +13,7 @@ LMXI:=	$(LMXD)/inc
 INC		=	pathfinder.h
 INCS	=	$(addprefix $(INCD)/, $(INC))
 
-SRC		= 	mx_printerr_pf.c mx_parse_file.c main.c
+SRC		= 	mx_parse_file.c mx_isnumber.c mx_atoi.c mx_printerr_pf.c mx_validation.c mx_validation_first_line.c mx_validation_num_islnd.c mx_arrlen.c main.c
 		
 SRCS	=	$(addprefix $(SRCD)/, $(SRC))
 OBJS	=	$(addprefix $(OBJD)/, $(SRC:%.c=%.o))

@@ -3,5 +3,6 @@
 char **mx_parse_file(char *file)
 {
     char **filearr = mx_strsplit(mx_file_to_str(file), '\n');
+    mx_validation(filearr);
     return filearr;
 }
