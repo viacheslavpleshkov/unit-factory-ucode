@@ -10,6 +10,7 @@
 // Utils pack
 void mx_printchar(char c);
 int mx_strlen(const char *s);
+int mx_arrlen(char **arr);
 void mx_print_unicode(wchar_t c);
 void mx_printerr(const char *s);
 void mx_printstr(const char *s);
