@@ -1,8 +1,8 @@
 #include "pathfinder.h"
 
-char **mx_parse_file(char *file)
+char *mx_parse_file(char *file)
 {
-    char **filearr = mx_strsplit(mx_file_to_str(file), '\n');
+    char *filearr = mx_file_to_str(file);
     mx_validation(filearr);
     return filearr;
 }

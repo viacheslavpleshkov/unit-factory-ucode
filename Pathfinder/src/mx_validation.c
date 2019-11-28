@@ -1,6 +1,8 @@
 #include "pathfinder.h"
 
-void mx_validation(char **aray) {
-    mx_validation_first_line(aray);
-    mx_validation_num_islnd(aray);
+void mx_validation(char *array) {
+    char **filearr = mx_strsplit(array, '\n');
+    mx_validation_first_line(filearr);
+    mx_validation_num_islnd(filearr);
+    mx_validation_check_line(filearr);
 }

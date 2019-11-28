@@ -21,6 +21,7 @@ int mx_sqrt(int x);
 char *mx_nbr_to_hex(unsigned long nbr);
 unsigned long mx_hex_to_nbr(const char *hex);
 char *mx_itoa(int number);
+int mx_atoi(const char *str);
 void mx_foreach(int *arr, int size, void (*f)(int));
 int mx_binary_search(char **arr, int size, const char *s, int *count);
 int mx_strcmp(const char *s1, const char *s2);
