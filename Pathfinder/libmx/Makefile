@@ -1,6 +1,7 @@
 NAME	=	libmx.a
 
 CFLG	=	-std=c11 -Wall -Wextra -Werror -Wpedantic
+COMP 	= 	clang
 
 SRCD	=	src
 INCD	=	inc
@@ -33,7 +34,7 @@ $(NAME): $(OBJS)
 	@printf "\r\33[2K$@\t   \033[32;1mcreated\033[0m\n"
 
 $(OBJD)/%.o: $(SRCD)/%.c $(INCS)
-	@clang $(CFLG) -c $< -o $@ -I$(INCD)
+	@$(COMP) $(CFLG) -c $< -o $@ -I$(INCD)
 	@printf "\r\33[2K$(NAME)\t   \033[33;1mcompile \033[0m$(<:$(SRCD)/%.c=%) "
 
 $(OBJS): | $(OBJD)
@@ -52,4 +53,4 @@ uninstall: clean
 reinstall: uninstall install
 
 start: 
-	@clang -std=c11 -Wall -Wextra -Werror -Wpedantic main.c libmx.a && ./a.out
+	@(COMP) -std=c11 -Wall -Wextra -Werror -Wpedantic main.c libmx.a && ./a.out

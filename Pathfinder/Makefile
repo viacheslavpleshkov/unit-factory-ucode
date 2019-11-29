@@ -1,6 +1,7 @@
 NAME	=	pathfinder
 
-CFLG	=	-std=c11 $(addprefix -W, all extra pedantic) -g
+CFLG	=	-std=c11 -Wall -Wextra -Werror -Wpedantic
+COMP 	= 	clang
 
 SRCD	=	src
 INCD	=	inc
@@ -13,7 +14,8 @@ LMXI:=	$(LMXD)/inc
 INC		=	pathfinder.h
 INCS	=	$(addprefix $(INCD)/, $(INC))
 
-SRC		= 	mx_parse_file.c mx_isnumber.c mx_printerr_pf.c mx_validation.c mx_validation_check_line.c  mx_validation_first_line.c mx_validation_num_islnd.c main.c
+SRC		= 	mx_parse_file.c mx_isnumber.c mx_printerr_pf.c mx_validation.c mx_validation_check_line.c \
+			mx_validation_first_line.c mx_validation_num_islnd.c main.c
 		
 SRCS	=	$(addprefix $(SRCD)/, $(SRC))
 OBJS	=	$(addprefix $(OBJD)/, $(SRC:%.c=%.o))
@@ -23,11 +25,11 @@ all: install clean
 install: $(LMXA) $(NAME)
 
 $(NAME): $(OBJS)
-	@clang $(CFLG) $(OBJS) -L$(LMXD) -lmx -o $@
+	@$(COMP) $(CFLG) $(OBJS) -L$(LMXD) -lmx -o $@
 	@printf "\r\33[2K$@\t   \033[32;1mcreated\033[0m\n"
 
 $(OBJD)/%.o: $(SRCD)/%.c $(INCS)
-	@clang $(CFLG) -c $< -o $@ -I$(INCD) -I$(LMXI)
+	@$(COMP) $(CFLG) -c $< -o $@ -I$(INCD) -I$(LMXI)
 	@printf "\r\33[2K$(NAME)\t   \033[33;1mcompile \033[0m$(<:$(SRCD)/%.c=%) "
 
 $(OBJS): | $(OBJD)
