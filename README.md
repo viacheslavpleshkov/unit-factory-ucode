@@ -14,10 +14,13 @@
 
 C, Ncurses, Makefile, File system, Terminal, Bash, Unix, CBL framework
 
-## My test case for all
+## My test case and PDF
 
-<a href="https://www.evernote.com/pub/mail16971/unit-factory-ucode" target="_blank" align="center">
-    <img src="https://github.com/slava-pleshkov/unit-factory-ucode/blob/master/Images/evernote_logo.png?raw=true" height="100px">
+<a href="http://bit.ly/33PcPlx" target="_blank" align="center">
+    <img src="https://github.com/slava-pleshkov/unit-factory-ucode/blob/master/.git_images/evernote_logo.png?raw=true" height="100px">
+</a>
+<a href="http://bit.ly/2LnozoX" target="_blank" align="center">
+    <img src="https://github.com/slava-pleshkov/unit-factory-ucode/blob/master/.git_images/google-drive_logo.png?raw=true" height="100px">
 </a>
 
 ## Track C
