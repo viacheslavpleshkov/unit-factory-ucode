@@ -1,6 +1,6 @@
 NAME	=	libmx.a
 
-CFLG	=	-std=c11 -Wall -Wextra -Werror -Wpedantic
+CFLG	=	-std=c11 -Wall -Wextra -Werror -Wpedantic -g
 COMP 	= 	clang
 
 SRCD	=	src

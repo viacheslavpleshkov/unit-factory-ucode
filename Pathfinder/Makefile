@@ -1,6 +1,6 @@
 NAME	=	pathfinder
 
-CFLG	=	-std=c11 -Wall -Wextra -Werror -Wpedantic
+CFLG	=	-std=c11 -Wall -Wextra -Werror -Wpedantic -g
 COMP 	= 	clang
 
 SRCD	=	src
@@ -14,13 +14,14 @@ LMXI:=	$(LMXD)/inc
 INC		=	pathfinder.h
 INCS	=	$(addprefix $(INCD)/, $(INC))
 
-SRC		= 	mx_parse_file.c mx_isnumber.c mx_printerr_pf.c mx_validation.c mx_validation_check_line.c \
-			mx_validation_first_line.c mx_validation_num_islnd.c main.c
+SRC		= 	mx_printerr_pf.c mx_validation_cmd_args.c mx_validation_file_dexist.c mx_validation_first_line.c \
+			mx_validation_num_islnd.c mx_validation_check_line.c mx_validation.c createNode.c mx_graph_parse.c \
+			mx_graph_create.c mx_graph_add_edge.c mx_graph_print.c mx_graph_algorithm.c main.c \
 		
 SRCS	=	$(addprefix $(SRCD)/, $(SRC))
 OBJS	=	$(addprefix $(OBJD)/, $(SRC:%.c=%.o))
 
-all: install clean
+all: install
 	
 install: $(LMXA) $(NAME)
 
