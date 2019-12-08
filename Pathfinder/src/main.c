@@ -1,9 +1,10 @@
 #include "pathfinder.h"
 #include <stdio.h>
 
-static void graph_main()
+static void graph_main(char *argv[])
 {
-    struct s_graph *graph = mx_graph_create(4);
+    char **arr = mx_file_to_arr(argv[1]);
+    struct s_graph *graph = mx_graph_create(mx_atoi(arr[0]));
     mx_graph_add_edge(graph, 0, 1);
     mx_graph_add_edge(graph, 0, 2);
     mx_graph_add_edge(graph, 1, 2);
@@ -16,5 +17,5 @@ static void graph_main()
 int main(int argc, char *argv[])
 {
     mx_validation(argc, argv);
-    graph_main();
+    graph_main(argv);
 }

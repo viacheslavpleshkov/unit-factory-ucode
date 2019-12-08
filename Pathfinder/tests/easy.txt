@@ -1,4 +1,5 @@
-3
-Blade-Wizard,1
-Drive-Blade,1
-Wizard-Drive,1
+4
+A-B,30
+B-C,40
+A-B,50
+D-C,60

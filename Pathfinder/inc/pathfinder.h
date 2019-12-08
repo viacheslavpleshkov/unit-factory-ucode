@@ -28,7 +28,7 @@ struct s_graph
 {
     int numVertices;
     int *visited;
-    struct node **adjLists; // we need int** to store a two dimensional array. Similary, we need struct node** to store an array of Linked lists
+    struct node **adjLists;
 };
 
 //Validation
@@ -46,5 +46,7 @@ void mx_graph_add_edge(struct s_graph *, int, int);
 void mx_graph_print(struct s_graph *);
 void mx_graph_algorithm(struct s_graph *, int);
 //Main
+char **mx_file_to_arr(char *file);
 int main(int argc, char *argv[]);
+
 #endif
