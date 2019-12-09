@@ -10,3 +10,6 @@
 [submodule "Libmx"]
 	path = Libmx
 	url = https://github.com/slava-pleshkov/unit-factory-ucode-libmx.git
+[submodule "Pathfinder"]
+	path = Pathfinder
+	url = https://github.com/slava-pleshkov/unit-factory-ucode-pathfinder.git
