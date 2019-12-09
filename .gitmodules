@@ -1,6 +1,6 @@
 [submodule "Endgame"]
 	path = Endgame
-	url = https://github.com/slava-pleshkov/a-story-of-one-fish
+	url = https://github.com/slava-pleshkov/unit-factory-ucode-endgame
 [submodule "Refresh-Marathon-C"]
 	path = Refresh-Marathon-C
 	url = https://github.com/slava-pleshkov/unit-factory-ucode-refresh-marathon-c.git
