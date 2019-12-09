@@ -1,3 +1,0 @@
-git add .
-git coomit -m"Task 00"
-git push

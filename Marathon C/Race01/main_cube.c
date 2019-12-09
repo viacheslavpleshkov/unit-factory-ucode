@@ -1,1 +1,0 @@
-void mx_cube(int n);

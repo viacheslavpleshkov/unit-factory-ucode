@@ -1,3 +1,0 @@
-* 6dc59bf : Task 07
-* 2f16df6 : Task 07
-* 89aa72c : Task 05

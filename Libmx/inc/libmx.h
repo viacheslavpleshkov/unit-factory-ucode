@@ -6,11 +6,13 @@
 #include <stdbool.h>
 #include <fcntl.h>
 #include <malloc/malloc.h>
-
+// #include <malloc.h>
 // Utils pack
 void mx_printchar(char c);
 int mx_strlen(const char *s);
+int mx_arrlen(char **arr);
 void mx_print_unicode(wchar_t c);
+void mx_printerr(const char *s);
 void mx_printstr(const char *s);
 void mx_print_strarr(char **arr, const char *delim);
 void mx_printint(int n);
@@ -19,6 +21,7 @@ int mx_sqrt(int x);
 char *mx_nbr_to_hex(unsigned long nbr);
 unsigned long mx_hex_to_nbr(const char *hex);
 char *mx_itoa(int number);
+int mx_atoi(const char *str);
 void mx_foreach(int *arr, int size, void (*f)(int));
 int mx_binary_search(char **arr, int size, const char *s, int *count);
 int mx_strcmp(const char *s1, const char *s2);

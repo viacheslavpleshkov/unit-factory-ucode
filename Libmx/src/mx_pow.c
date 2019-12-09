@@ -2,16 +2,15 @@
 
 double mx_pow(double n, unsigned int pow)
 {
+    double result = 1;
+
     if (pow == 0)
+        return result;
+    else if (pow > 0)
     {
-        return 1;
+        for (unsigned int i = 0; i < pow; i++)
+            result *= n;
     }
-    else if (pow == 1)
-    {
-        return n;
-    }
-    else
-    {
-        return n * mx_pow(n, pow - 1);
-    }
+
+    return result;
 }
