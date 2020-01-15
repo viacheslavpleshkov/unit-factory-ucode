@@ -1,3 +1,12 @@
 [submodule "Uls"]
 	path = Uls
 	url = https://github.com/slava-pleshkov/unit-factory-ucode-uls.git
+[submodule "Pathfinder"]
+	path = Pathfinder
+	url = https://github.com/slava-pleshkov/unit-factory-ucode-pathfinder.git
+[submodule "Libmx"]
+	path = Libmx
+	url = https://github.com/slava-pleshkov/unit-factory-ucode-libmx.git
+[submodule "Refresh-Marathon-C"]
+	path = Refresh-Marathon-C
+	url = https://github.com/slava-pleshkov/unit-factory-ucode-refresh-marathon-c.git

@@ -14,15 +14,6 @@
 
 C, Ncurses, Makefile, File system, Terminal, Bash, Unix, CBL framework
 
-## My test case and PDF
-
-<a href="http://bit.ly/33PcPlx" target="_blank" align="center">
-    <img src="https://github.com/slava-pleshkov/unit-factory-ucode/blob/master/.git_images/evernote_logo.png?raw=true" height="100px">
-</a>
-<a href="http://bit.ly/2LnozoX" target="_blank" align="center">
-    <img src="https://github.com/slava-pleshkov/unit-factory-ucode/blob/master/.git_images/google-drive_logo.png?raw=true" height="100px">
-</a>
-
 ## Track C
 1. Marathon C | Learning C (Done)
 1. Endgame | Create a game on C (Done)
