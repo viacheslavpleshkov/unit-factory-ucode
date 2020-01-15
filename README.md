@@ -28,8 +28,8 @@ C, Ncurses, Makefile, File system, Terminal, Bash, Unix, CBL framework
 1. Endgame | Create a game on C (Done)
 1. Refresh Marathon C | The challenge to refresh all the knowledge you have gained at Marathon C. (Done)
 1. Libmx | Create your own C library. (Done)
-1. Pathfinder | Learn pathfinding algorithms. (In progress)
-1. uls | Recode the system's utility ls.
+1. Pathfinder | Learn pathfinding algorithms. (Done)
+1. uls | Recode the system's utility ls. (In progress)
 1. ush | Develop your own shell.
 1. uchat | Create a real-time communication tool using creativity and the whole cycle of Challenge Based Learning framework.
 
