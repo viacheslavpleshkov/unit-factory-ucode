@@ -16,3 +16,6 @@
 [submodule "Endgame"]
 	path = Endgame
 	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame
+[submodule "Ush"]
+	path = Ush
+	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-ush.git
