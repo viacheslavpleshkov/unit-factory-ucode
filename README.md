@@ -11,14 +11,20 @@
 <p align="center">🏊🏻‍♂️ Projects that were written by myself during my studies at Unit Factory program uCode</p>
 
 ## Track C
-1. Marathon C | Learning C (Done)
-1. Endgame | Create a game on C (Done)
-1. Refresh Marathon C | The challenge to refresh all the knowledge you have gained at Marathon C. (Done)
-1. Libmx | Create your own C library. (Done)
-1. Pathfinder | Learn pathfinding algorithms. (Done)
-1. uls | Recode the system's utility ls. (Done)
-1. ush | Develop your own shell.(In progress)
-1. uchat | Create a real-time communication tool using creativity and the whole cycle of Challenge Based Learning framework.
+|Project name|Description|Process|
+|----------------|----------------------------------------------------|---|
+|Marathon C|Learning C|✔|
+|Endgame|Create a game on C|✔|
+|Refresh Marathon C|The challenge to refresh all the knowledge you have gained at Marathon C.|✔|
+|Libmx|Create your own C library.|✔|
+|Pathfinder|Learn pathfinding algorithms.|✔ |
+|uls|Recode the system's utility ls.|✔|
+|ush|Develop your own shell.|✔|
+|uchat|Create a real-time communication tool using creativity and the whole cycle of Challenge Based Learning framework.|✔|
+## Track C++
+|Project name|Description|Process|
+|----------------|----------------------------------------------------|---|
+|Marathon C++|Learning C++|✘|
 
 ## License
 
