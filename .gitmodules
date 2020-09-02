@@ -21,7 +21,4 @@
 	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-ush.git
 [submodule "Uchat"]
 	path = Uchat
-	url = git@github.com:viacheslavpleshkov/unit-factory-ucode-uchat.git
-[submodule "Half-Marathon-CPP"]
-	path = Half-Marathon-CPP
-	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-half-marathon-cpp
+	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-uchat.git
