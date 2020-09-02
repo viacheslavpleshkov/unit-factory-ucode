@@ -24,7 +24,7 @@
 ## Track C++
 |Project name|Description|Process|
 |----------------|----------------------------------------------------|---|
-|Marathon C++|Learning C++|✘|
+|Half-Marathon-CPP|Learning C++|✔|
 
 ## License
 
