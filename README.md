@@ -36,6 +36,11 @@
 |Project name|Description|Process|
 |----------------|----------------------------------------------------|---|
 |Half Marathon C++|Learning C++|✔|
+|Utag|Develop a GUI app to edit audio file tags.|✘|
+|Utext|Develop a text editor app.|✘|
+|Uamp|Develop a music player.|✘|
+|Uvideo|Develop a video editor.|✘|
+|Utracker|Develop a team collaborative software (project management tool).|✘|
 
 
 
