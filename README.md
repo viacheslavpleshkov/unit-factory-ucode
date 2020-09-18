@@ -18,13 +18,26 @@
 |Refresh Marathon C|The challenge to refresh all the knowledge you have gained at Marathon C.|✔|
 |Libmx|Create your own C library.|✔|
 |Pathfinder|Learn pathfinding algorithms.|✔ |
-|uls|Recode the system's utility ls.|✔|
-|ush|Develop your own shell.|✔|
-|uchat|Create a real-time communication tool using creativity and the whole cycle of Challenge Based Learning framework.|✔|
+|Uls|Recode the system's utility ls.|✔|
+|Ush|Develop your own shell.|✔|
+|Uchat|Create a real-time communication tool using creativity and the whole cycle of Challenge Based Learning framework.|✔|
+
+## Track JAVA
+|Project name|Description|Process|
+|----------------|----------------------------------------------------|---|
+|Dino|Recreation of the hidden Google T-Rex game from Chrome offline mode.|✘|
+|Tamagotchi|Create a game about virtual pets.|✘|
+|Pixelizator|Create a web app for pixelation of images.|✘|
+|Ubay|Create an online auction.|✘|
+|Cashflow|Create a web app to control your finances.|✘|
+|Jgram|Create a social network using creativity and the whole cycle of Challenge Based Learning framework.|✘|
+
 ## Track C++
 |Project name|Description|Process|
 |----------------|----------------------------------------------------|---|
-|Half-Marathon-CPP|Learning C++|✔|
+|Half Marathon C++|Learning C++|✔|
+
+
 
 ## License
 
