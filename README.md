@@ -22,7 +22,7 @@
 |Ush|Develop your own shell.|✔|
 |Uchat|Create a real-time communication tool using creativity and the whole cycle of Challenge Based Learning framework.|✔|
 
-## Track JAVA
+## Track Java
 |Project name|Description|Process|
 |----------------|----------------------------------------------------|---|
 |Dino|Recreation of the hidden Google T-Rex game from Chrome offline mode.|✘|
