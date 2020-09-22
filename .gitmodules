@@ -25,3 +25,6 @@
 [submodule "Dino"]
 	path = Dino
 	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-dino.git
+[submodule "Uchat"]
+	path = Uchat
+	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-uchat.git
