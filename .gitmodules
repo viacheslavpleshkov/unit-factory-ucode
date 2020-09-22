@@ -15,13 +15,13 @@
 	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-marathon-c.git
 [submodule "Endgame"]
 	path = Endgame
-	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame
+	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame.git
 [submodule "Ush"]
 	path = Ush
 	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-ush.git
-[submodule "Uchat"]
-	path = Uchat
-	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-uchat.git
 [submodule "Half-Marathon-C++"]
 	path = Half-Marathon-C++
 	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-half-marathon-cpp.git
+[submodule "Dino"]
+	path = Dino
+	url = https://github.com/viacheslavpleshkov/unit-factory-ucode-dino.git

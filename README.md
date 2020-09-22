@@ -25,7 +25,7 @@
 ## Track Java
 |Project name|Description|Process|
 |----------------|----------------------------------------------------|---|
-|Dino|Recreation of the hidden Google T-Rex game from Chrome offline mode.|✘|
+|Dino|Recreation of the hidden Google T-Rex game from Chrome offline mode.|✔|
 |Tamagotchi|Create a game about virtual pets.|✘|
 |Pixelizator|Create a web app for pixelation of images.|✘|
 |Ubay|Create an online auction.|✘|
